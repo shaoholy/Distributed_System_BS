@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.team3.grpc";
+
+message LogMsg {
+    string userName = 1;
+    string password = 2;
+}
+
+message Tweet {
+    // UUID, created by client
+    string tweetId = 1;
+    int64 userId = 2;
+    string content = 3;
+    int64 createdEpoch = 4;
+}
+
+message ClientRequest {
+    string requestId = 1;
+    string address = 2;
+    int64 epoch = 4;
+    bool loggedIn = 5;
+    // optional, created by logInOut service, main db updated by first tweet
+    string userId = 6;
+    // action: login, logout, signup, tweet, read, follow, unfollow
+    string action = 7;
+    // optional, proto3 eliminate this keyword
+    Tweet tweet = 8;
+    // optional
+    LogMsg logMsg = 9;
+    //optional
+    string secondaryUserName = 10;
+}
+
+

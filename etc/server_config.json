@@ -1,0 +1,48 @@
+{
+  "load_balancer" : {
+    "address" : "localhost",
+    "port" : 12111
+  },
+  "app_server" : [
+    {
+      "address" : "localhost",
+      "port" : 12112
+    },
+    {
+      "address" : "localhost",
+      "port" : 12113
+    },
+    {
+      "address" : "localhost",
+      "port" : 12114
+    }
+  ],
+  "file_server" : {
+    "node": [
+      {
+        "address" : "localhost",
+        "port" : 12115
+      },
+      {
+        "address" : "localhost",
+        "port" : 12116
+      },
+      {
+        "address" : "localhost",
+        "port" : 12117
+      },
+      {
+        "address" : "localhost",
+        "port" : 12118
+      },
+      {
+        "address" : "localhost",
+        "port" : 12119
+      }
+    ],
+    "default_leader": {
+      "address" : "localhost",
+      "port": 12115
+    }
+  }
+}

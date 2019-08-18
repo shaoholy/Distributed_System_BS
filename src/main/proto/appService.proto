@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.team3.grpc";
+
+import "clientRequest.proto";
+
+service AppService {
+    rpc clientRequestHandling(ClientRequest) returns (AppResponse) {}
+}
+
+message AppResponse {
+    bool succeed = 1;
+    string msg = 2;
+    // optional
+    repeated Tweet tweets = 3;
+}

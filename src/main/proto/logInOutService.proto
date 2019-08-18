@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.team3.grpc";
+
+import "clientRequest.proto";
+
+service LogInService {
+    rpc logIn(LogMsg) returns (LogResponse) {}
+    rpc logOut(LogMsg) returns (LogResponse) {}
+    rpc signUp(LogMsg) returns (LogResponse) {}
+}
+
+message LogResponse {
+    bool success = 1;
+    string msg = 2;
+}
